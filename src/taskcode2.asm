@@ -55,7 +55,7 @@ asm_main:
         jmp resolution
 
         flag_positive:
-        mov edx, msg_positive
+        mov eax, msg_positive
         call print_string
         call print_nl
         jmp resolution
@@ -66,5 +66,6 @@ asm_main:
         mov     eax, [intager2]
         call print_int
         call print_nl
+    popa             ; restore registers saved by pusha, must match it before ret
     mov     eax, 0   ; return 0
     ret
