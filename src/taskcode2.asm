@@ -6,7 +6,7 @@ segment .data
 ; giveint1        db "Enter 1 number" , 0 ; prompt to enter first int
 ;loopLimitInt  db "set limit for loop", 0 ; prompt the user to set the loop limit
 giveint1        db "starting number for loop" , 0 ; prompt to enter second int
-outsm            db " comparison of result  ", 0
+outsm           db " comparison of result  ", 0
 
 msg_zero      db "The number is zero", 0
 msg_negative  db "The number is negative", 0
