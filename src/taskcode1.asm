@@ -4,7 +4,7 @@ segment .data
     giveint1        db "Enter 1 number" , 0 ; prompt to enter first int
     giveint2        db "Enter 2 number" , 0 ; prompt to enter second int
     outsm            db " sum is =  ", 0 ; egxample , 0s end strings and
-                                         ; brake give-int1 from give-int2
+     ; brake give-int1 from give-int2
 segment .bss
     intager1        resd 1 ; definition of  resd 1:  res- reserve the memory
     intager2        resd 1 ; with no value assigned,
@@ -20,14 +20,14 @@ asm_main:
     mov     eax, giveint1       ; print the first prompt
     call    print_string        ;
     call    read_int            ; read num in eax
-    mov     [intager1], eax     ; save int to eax
+    mov     [intager1], eax     ; save int from eax to intager
 
     ; second int capture and saving code to eax
 
     mov     eax, giveint2       ; print the first prompt
     call    print_string        ;
     call    read_int            ; read number to eax
-    mov     [intager2], eax     ; save int 2 to eax
+    mov     [intager2], eax     ; save int 2 from eax to intager2
 
     ; add int1 and int2  save results to eax
 

@@ -43,8 +43,8 @@ asm_main:
     jg      flag_positive       ; if grater tahn 0, jump to flag_positive
 
         flag_zero:
-            mov eax, msg_zero   ;  EDX data	used for I/O operations.
-            call print_string   ;  ECX automatically used as a loop and shift counter.
+            mov eax, msg_zero   ;  
+            call print_string   ; 
             call print_nl
             jmp resolution
 
